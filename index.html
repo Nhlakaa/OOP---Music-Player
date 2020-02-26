@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <script defer src="function/imports.js"></script>
+    <script defer src="function/main.js"></script>  
+</head>
+<body>
+
+    <style>
+        body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            font-family: sans-serif;
+
+        }
+
+        .player {
+            position: relative;
+            width: 40%;
+            height: 60%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, 150%);
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+    
+    <div class="player">
+        <audio class='track' loop>
+            <source src="resources/1.mp3" type="audio/mpeg">
+        </audio>
+
+        <button class='play'>Play</button>
+        <button class='pause'>Pause</button>
+        <button class='back'>Rewind</button>
+        <button class='forward'>Forward</button> 
+
+        <div class="track-info">
+            <p class="time">--:--</p>
+            <p class="duration">--:--</p>
+        </div>
+
+        <div class="prg">
+            <progress class="progressbar" value="0" max="0"></progress>
+        </div>     
+    </div>
+</body>
+</html>
